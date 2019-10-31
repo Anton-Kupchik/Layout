@@ -1,0 +1,158 @@
+.contact {
+    @include screen(md) {
+    &__data {
+        padding: 0 0 0 30px;
+        text-align: left;  
+
+        @include screen(lg) {
+            padding: 0 0 0 50px;
+        }
+    }
+     
+}
+    &__data-title {
+        position: relative;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-family: $font-second;
+        font-style: normal;
+        margin-bottom: 15px;
+        margin-top: 15px;
+
+        @include screen(lg) {
+            margin-top: 30px; 
+        }
+
+        &-address::before {
+            content: '';
+            position: absolute;
+            background: url(../images/add.png) no-repeat;
+            left: calc(50% - 50px);
+            top: 55%;
+            transform: translate(-50%,-50%);
+            height: 20px;
+            width: 18px;
+        }
+        &-hotline::before {
+            content: '';
+            position: absolute;
+            background: url(../images/hot.png) no-repeat;
+            left: calc(50% - 70px);
+            top: 55%;
+            transform: translate(-50%,-50%);
+            height: 20px;
+            width: 18px;
+        }
+        &-email::before {
+            content: '';
+            position: absolute;
+            background: url(../images/mail.png) no-repeat;
+            left: calc(50% - 41px);
+            top: 68%;
+            transform: translate(-50%,-50%);
+            height: 20px;
+            width: 18px;
+        }
+        @include screen(md) {
+            &-address::before,
+            &-hotline::before,
+            &-email::before {
+                left: calc(100% - 110%); 
+            }
+
+        }
+    }
+    &__data-address p {
+        font-size: 12px;
+        font-style: normal;
+
+       
+    }
+    &__form {
+        margin-top: 30px;
+
+        @include screen(md) {
+            margin-top: 0;
+            text-align: left;
+        }
+    }
+    &__form-inner {
+        @include screen(md) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__form input,
+    &__form textarea {
+        font-size: 12px;
+        text-transform: uppercase;
+        outline: none;
+        padding: 18px;
+        width: 100%;
+        border: 1px solid #555555;
+        margin-bottom: 20px;
+        resize: none;
+
+        @include placeholder(inherit, 0);
+
+    }
+    
+    &__form input:focus,
+    &__form textarea:focus {
+        border-color: #c0301c;
+    }
+    
+
+    @include screen(md) {
+        &__form input {
+            width: calc(50% - 10px);
+        }
+        
+        &__form input:nth-child(odd) {
+            margin-right: 18px;
+        }
+        
+}
+@include screen(md) {
+&__form-btn {
+    display: flex;
+    align-items: center;
+}
+}
+
+&__form-btn button {
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    outline: none;
+    padding: 18px;
+    width: 170px;
+    border: 1px solid #555555;
+    background: transparent;
+    margin-bottom: 20px;
+
+    @include screen(md) {
+        margin-bottom: 0;
+        margin-right: 20px;
+
+    }
+    @include screen(lg) {
+        margin-right: 40px;
+    }
+}
+&__form-btn button:hover {
+    background: $color-hover;
+}
+&__form-btn p {
+    font-size: 9px;
+
+    @include screen(lg) {
+        font-size: 12px;
+    }    
+
+    & span {
+        color: #c43d2a;
+    }
+}
+}

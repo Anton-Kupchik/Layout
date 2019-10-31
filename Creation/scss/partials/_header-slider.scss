@@ -1,0 +1,196 @@
+.header-slider {
+        .slick-prev,
+        .slick-next
+        {
+            font-size: 0;
+            line-height: 0;
+        
+            position: absolute;
+            top: 75%;
+            z-index: 5;
+        
+            display: block;
+        
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+        
+            cursor: pointer;
+        
+            color: #878787;
+            border: none;
+            outline: none;
+            background: #3c4140;
+        }
+        .slick-prev:hover,
+        .slick-prev:focus,
+        .slick-next:hover,
+        .slick-next:focus
+        {
+            color: #fff;
+            outline: none;
+            background: $color-second;
+        }
+        .slick-prev:hover:before,
+        .slick-prev:focus:before,
+        .slick-next:hover:before,
+        .slick-next:focus:before
+        {
+            opacity: 1;
+        }
+        .slick-prev.slick-disabled:before,
+        .slick-next.slick-disabled:before
+        {
+            opacity: .25;
+        }
+        
+        .slick-prev:before,
+        .slick-next:before
+        {
+            font-family: "fontello";
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 300;
+        
+            opacity: .75;
+            color: white;
+        
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .slick-prev
+        {
+            left: 0;
+        }
+        [dir='rtl'] .slick-prev
+        {
+            right: 25px;
+            left: auto;
+        }
+        .slick-prev:before
+        {
+            content: '\e802';
+        }
+        [dir='rtl'] .slick-prev:before
+        {
+            content: '\e802';
+        }
+        
+        .slick-next
+        {
+            right: 0;
+        }
+        [dir='rtl'] .slick-next
+        {
+            right: auto;
+            left: 25px;
+        }
+        .slick-next:before
+        {
+            content: '\e801';
+        }
+        [dir='rtl'] .slick-next:before
+        {
+            content: '\e801';
+        }
+        /* Dots */
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+  
+  .slick-dots {
+    position: absolute;
+    bottom: -25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .slick-dots li button {
+    border: 0;
+    background: transparent;
+    display: block;
+    height: 20px;
+    width: 20px;
+    outline: none;
+    line-height: 0px;
+    font-size: 0px;
+    color: transparent;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .slick-dots li button:hover, .slick-dots li button:focus {
+    outline: none;
+  }
+  
+  .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+    opacity: 1;
+  }
+  
+  .slick-dots li button:before {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    content: "•";
+    width: 20px;
+    height: 20px;
+    font-family: "slick";
+    font-size: 25px;
+    line-height: 20px;
+    text-align: center;
+    color: $color-second;
+    opacity: 0.25;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: $color-second;;
+    opacity: 0.75;
+  }
+  /*# sourceMappingURL=slick-theme.css.map */
+    
+
+    width: 170px;
+    margin: auto;
+
+    @include screen(xxl) {
+        margin-left: 85%;
+        padding-bottom: 120px;
+    }
+
+
+    &-item-inner {
+    margin-bottom: 50px;
+        @include screen(lg) {
+            margin-bottom: 80px;
+        }
+        @include screen(xl) {
+            margin-bottom: 100px;
+        }
+
+    img {
+        max-width: 170px;
+        height: 105px;
+    }
+}
+    }
+
